@@ -58,9 +58,9 @@ ENV BASH_ENV=${CONTAINER_SCRIPTS_PATH}/scl_enable \
     ENV=${CONTAINER_SCRIPTS_PATH}/scl_enable \
     PROMPT_COMMAND=". ${CONTAINER_SCRIPTS_PATH}/scl_enable"
 
-COPY 5.7/root-common /
-COPY 5.7/s2i-common/bin/ $STI_SCRIPTS_PATH
-COPY 5.7/root /
+COPY /5.7/root-common /
+COPY /5.7/s2i-common/bin/ $STI_SCRIPTS_PATH
+COPY /5.7/root /
 
 # this is needed due to issues with squash
 # when this directory gets rm'd by the container-setup
